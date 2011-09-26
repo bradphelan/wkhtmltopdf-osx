@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
   s.date = %q{2011-09-26}
   s.description = %q{wkhtmltopdf binaries for OSX(darwin)}
   s.email = %q{bradphelan@xtargets.com}
-  s.executables = [%q{wkhtmltopdf}, %q{wkhtmltopdf-darwin}]
+  s.executables = [%q{wkhtmltopdf-darwin}]
   s.extra_rdoc_files = [
     "LICENSE.txt",
     "README.rdoc"
@@ -25,9 +25,8 @@ Gem::Specification.new do |s|
     "README.rdoc",
     "Rakefile",
     "VERSION",
-    "bin/wkhtmltopdf",
     "bin/wkhtmltopdf-darwin",
-    "lib/wkhtmltopdf_heroku_and_osx_binaries.rb",
+    "lib/wkhtmltopdf-osx.rb",
     "test/helper.rb",
     "test/test_wkhtmltopdf_heroku_and_osx_binaries.rb",
     "wkhtmltopdf-osx.gemspec"

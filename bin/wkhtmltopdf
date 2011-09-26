@@ -1,12 +1,10 @@
 #!/usr/bin/ruby
 
 
-if RUBY_PLATFORM =~ /x86_64-linux/
-  executable = 'wkhtmltopdf-linux-amd64'
-elsif RUBY_PLATFORM =~ /darwin/
+if RUBY_PLATFORM =~ /darwin/
   executable = 'wkhtmltopdf-darwin'
 else
-  raise "Invalid platform. Must be running linux amd x64 or intel-based Mac OS."
+  raise "Invalid platform. Must be running OSX(darwin)"
 end
 
 arguments = $*.map { |x| x.include?(' ') ? "'" + x + "'" : x }

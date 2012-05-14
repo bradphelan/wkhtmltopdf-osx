@@ -1,4 +1,8 @@
-WKHTMLTOPDF_PATH = File.expand_path "../../bin/wkhtmltopdf-darwin", __FILE__
+# use AMD64 library for heroku, Darwin library for OSX
+on_heroku = !ENV.keys.select{|k| k.starts_with?("HEROKU")}.empty?
+executable = on_heroku ? "wkhtmltopdf-linux-amd64" : "wkhtmltopdf-darwin"
+
+WKHTMLTOPDF_PATH = File.expand_path "../../bin/#{executable}", __FILE__
 
 begin
   require 'pdfkit'
